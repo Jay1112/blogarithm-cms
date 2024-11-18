@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "app_configs",
+  "info": {
+    "singularName": "app-config",
+    "pluralName": "app-configs",
+    "displayName": "AppConfig"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "intro": {
+      "type": "text"
+    }
+  }
+}
