@@ -28,17 +28,6 @@
       "target": "api::blog.blog",
       "mappedBy": "topic"
     },
-    "icon": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "logo": {
       "type": "text"
     }
