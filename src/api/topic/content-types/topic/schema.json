@@ -4,7 +4,8 @@
   "info": {
     "singularName": "topic",
     "pluralName": "topics",
-    "displayName": "Topic"
+    "displayName": "Topic",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,16 +18,6 @@
     "description": {
       "type": "text"
     },
-    "icon": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
     "slug": {
       "type": "uid",
       "targetField": "title"
@@ -36,6 +27,20 @@
       "relation": "oneToMany",
       "target": "api::blog.blog",
       "mappedBy": "topic"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "logo": {
+      "type": "text"
     }
   }
 }

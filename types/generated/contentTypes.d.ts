@@ -369,7 +369,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiAppConfigAppConfig extends Struct.CollectionTypeSchema {
+export interface ApiAppConfigAppConfig extends Struct.SingleTypeSchema {
   collectionName: 'app_configs';
   info: {
     displayName: 'AppConfig';
@@ -383,7 +383,7 @@ export interface ApiAppConfigAppConfig extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    intro: Schema.Attribute.Text;
+    description: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -391,6 +391,7 @@ export interface ApiAppConfigAppConfig extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -434,6 +435,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
 export interface ApiTopicTopic extends Struct.CollectionTypeSchema {
   collectionName: 'topics';
   info: {
+    description: '';
     displayName: 'Topic';
     pluralName: 'topics';
     singularName: 'topic';
@@ -451,6 +453,7 @@ export interface ApiTopicTopic extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::topic.topic'> &
       Schema.Attribute.Private;
+    logo: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;
