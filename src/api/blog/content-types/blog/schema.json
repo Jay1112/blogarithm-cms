@@ -27,17 +27,6 @@
     "author": {
       "type": "string"
     },
-    "featured_image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "topic": {
       "type": "relation",
       "relation": "manyToOne",
@@ -46,6 +35,18 @@
     },
     "content": {
       "type": "richtext"
+    },
+    "featured_image": {
+      "type": "text"
+    },
+    "featured_image_alt_tag": {
+      "type": "string"
+    },
+    "featured_image_caption": {
+      "type": "string"
+    },
+    "topicName": {
+      "type": "string"
     }
   }
 }

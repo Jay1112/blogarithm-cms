@@ -416,9 +416,9 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
-    featured_image: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
+    featured_image: Schema.Attribute.Text;
+    featured_image_alt_tag: Schema.Attribute.String;
+    featured_image_caption: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
       Schema.Attribute.Private;
@@ -426,6 +426,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     topic: Schema.Attribute.Relation<'manyToOne', 'api::topic.topic'>;
+    topicName: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
